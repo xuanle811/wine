@@ -25,7 +25,10 @@ jobs:
           echo "## MODEL METRICS" > report.md
           cat metrics.txt
           echo "## model vz"
-          cml comment update feature_importance.png --md >> report.md
-          cml comment update residuals.png --md >> report.md
+          echo '![](./feature_importance.png)' >> report.md
+          echo '![](./residuals.png)' >> report.md
+          cml comment create report.md
+          # cml comment update feature_importance.png --md >> report.md
+          # cml comment update residuals.png --md >> report.md
 
-          cml-send-comment report.md
+          # cml-send-comment report.md
