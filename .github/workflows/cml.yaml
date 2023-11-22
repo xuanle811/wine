@@ -24,7 +24,7 @@ jobs:
           python train.py
           echo "## MODEL METRICS" > report.md
           cat metrics.txt
-          echo "## model vz"
+          echo "## model vz" >> report.md
           echo '![](./feature_importance.png)' >> report.md
           echo '![](./residuals.png)' >> report.md
           cml comment create report.md
