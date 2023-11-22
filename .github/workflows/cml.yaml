@@ -25,5 +25,5 @@ jobs:
           echo "## MODEL METRICS" > report.md
           cat metrics.txt
 
-          cat-publish feature_importance.png --md >> report.md
-          cat-publish residuals.png --md >> report.md
+          cml-publish feature_importance.png --md >> report.md
+          cml-publish residuals.png --md >> report.md
